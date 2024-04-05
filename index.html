@@ -461,26 +461,26 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </li>
 <li><a href="#_team_api">Team API</a>
 <ul class="sectlevel2">
-<li><a href="#Team-API">2.1 팀 생성</a></li>
+<li><a href="#Team-API">팀 생성</a></li>
 <li><a href="#_팀명_중복_체크">팀명 중복 체크</a></li>
-<li><a href="#_2_2_팀_주간_랭킹_조회">2.2 팀 주간 랭킹 조회</a></li>
-<li><a href="#_2_2_1_팀_실시간_랭킹_조회">2.2.1 팀 실시간 랭킹 조회</a></li>
-<li><a href="#_2_3_팀_전체_조회_검색">2.3 팀 전체 조회 + 검색</a></li>
-<li><a href="#_2_4_팀_상세_조회">2.4 팀 상세 조회</a></li>
+<li><a href="#_팀_주간_랭킹_조회">팀 주간 랭킹 조회</a></li>
+<li><a href="#_팀_실시간_랭킹_조회">팀 실시간 랭킹 조회</a></li>
+<li><a href="#_팀_전체_조회_검색">팀 전체 조회 + 검색</a></li>
+<li><a href="#_팀_상세_조회">팀 상세 조회</a></li>
 <li><a href="#_다른_팀_상세_조회">다른 팀 상세 조회</a></li>
 <li><a href="#_팀_가입_승인_대기_리스트_조회">팀 가입 승인 대기 리스트 조회</a></li>
-<li><a href="#_2_5_팀_정보_수정">2.5 팀 정보 수정</a></li>
-<li><a href="#_2_5_1_팀원_추방">2.5.1 팀원 추방</a></li>
-<li><a href="#_2_5_2_팀_가입">2.5.2 팀 가입</a></li>
+<li><a href="#_팀_정보_수정">팀 정보 수정</a></li>
+<li><a href="#_팀원_추방">팀원 추방</a></li>
+<li><a href="#_팀_가입">팀 가입</a></li>
 <li><a href="#_팀_가입_승인">팀 가입 승인</a></li>
 <li><a href="#_팀_가입_거절">팀 가입 거절</a></li>
-<li><a href="#_2_5_3_팀_탈퇴">2.5.3 팀 탈퇴</a></li>
-<li><a href="#_2_6_팀_삭제">2.6 팀 삭제</a></li>
+<li><a href="#_팀_탈퇴">팀 탈퇴</a></li>
+<li><a href="#_팀_삭제">팀 삭제</a></li>
 </ul>
 </li>
 <li><a href="#_chat_api">Chat API</a>
 <ul class="sectlevel2">
-<li><a href="#Chat-API">2.7.2 채팅방 상세 조회</a></li>
+<li><a href="#Chat-API">채팅방 상세 조회</a></li>
 </ul>
 </li>
 <li><a href="#_member_api">Member API</a>
@@ -1484,7 +1484,7 @@ Content-Length: 79
 <h2 id="_team_api"><a class="link" href="#_team_api">Team API</a></h2>
 <div class="sectionbody">
 <div class="sect2">
-<h3 id="Team-API"><a class="link" href="#Team-API">2.1 팀 생성</a></h3>
+<h3 id="Team-API"><a class="link" href="#Team-API">팀 생성</a></h3>
 <div class="sect3">
 <h4 id="create-team"><a class="link" href="#create-team">HTTP Request</a></h4>
 <div class="listingblock">
@@ -1838,7 +1838,7 @@ Content-Length: 80
 </div>
 </div>
 <div class="sect2">
-<h3 id="_2_2_팀_주간_랭킹_조회"><a class="link" href="#_2_2_팀_주간_랭킹_조회">2.2 팀 주간 랭킹 조회</a></h3>
+<h3 id="_팀_주간_랭킹_조회"><a class="link" href="#_팀_주간_랭킹_조회">팀 주간 랭킹 조회</a></h3>
 <div class="sect3">
 <h4 id="weekly-team-ranking"><a class="link" href="#weekly-team-ranking">HTTP Request</a></h4>
 <div class="listingblock">
@@ -1918,8 +1918,8 @@ Content-Length: 1788
       "paged" : true
     },
     "last" : true,
-    "totalElements" : 1,
     "totalPages" : 1,
+    "totalElements" : 1,
     "size" : 6,
     "number" : 0,
     "sort" : {
@@ -2180,7 +2180,7 @@ Content-Length: 1788
 </div>
 </div>
 <div class="sect2">
-<h3 id="_2_2_1_팀_실시간_랭킹_조회"><a class="link" href="#_2_2_1_팀_실시간_랭킹_조회">2.2.1 팀 실시간 랭킹 조회</a></h3>
+<h3 id="_팀_실시간_랭킹_조회"><a class="link" href="#_팀_실시간_랭킹_조회">팀 실시간 랭킹 조회</a></h3>
 <div class="sect3">
 <h4 id="rank-of-realtime"><a class="link" href="#rank-of-realtime">HTTP Request</a></h4>
 <div class="listingblock">
@@ -2197,7 +2197,7 @@ Host: localhost:8080</code></pre>
 <div class="content">
 <pre class="highlightjs highlight nowrap"><code class="language-http hljs" data-lang="http">HTTP/1.1 200 OK
 Content-Type: application/json
-Content-Length: 1456
+Content-Length: 1630
 
 {
   "code" : 200,
@@ -2206,26 +2206,32 @@ Content-Length: 1456
   "data" : {
     "content" : [ {
       "teamRanks" : [ {
+        "teamRanks" : null,
         "teamName" : "팀이름1",
         "teamRankRealtime" : 1,
         "teamScoreRealtime" : 600
       }, {
+        "teamRanks" : null,
         "teamName" : "팀이름2",
         "teamRankRealtime" : 2,
         "teamScoreRealtime" : 500
       }, {
+        "teamRanks" : null,
         "teamName" : "팀이름3",
         "teamRankRealtime" : 3,
         "teamScoreRealtime" : 400
       }, {
+        "teamRanks" : null,
         "teamName" : "팀이름4",
         "teamRankRealtime" : 4,
         "teamScoreRealtime" : 300
       }, {
+        "teamRanks" : null,
         "teamName" : "팀이름5",
         "teamRankRealtime" : 5,
         "teamScoreRealtime" : 200
       }, {
+        "teamRanks" : null,
         "teamName" : "팀이름6",
         "teamRankRealtime" : 6,
         "teamScoreRealtime" : 100
@@ -2247,8 +2253,8 @@ Content-Length: 1456
       "paged" : true
     },
     "last" : true,
-    "totalElements" : 1,
     "totalPages" : 1,
+    "totalElements" : 1,
     "size" : 6,
     "number" : 0,
     "sort" : {
@@ -2316,7 +2322,13 @@ Content-Length: 1456
 <td class="tableblock halign-left valign-top"><p class="tableblock"><code>data.content[].teamRanks[]</code></p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><code>Array</code></p></td>
 <td class="tableblock halign-left valign-top"></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">팀 실시간 랭킹</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">팀 실시간 랭킹정보</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>data.content[].teamRanks[].teamRanks</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>Null</code></p></td>
+<td class="tableblock halign-left valign-top"></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">팀 랭킹</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><code>data.content[].teamRanks[].teamName</code></p></td>
@@ -2491,7 +2503,7 @@ Content-Length: 1456
 </div>
 </div>
 <div class="sect2">
-<h3 id="_2_3_팀_전체_조회_검색"><a class="link" href="#_2_3_팀_전체_조회_검색">2.3 팀 전체 조회 + 검색</a></h3>
+<h3 id="_팀_전체_조회_검색"><a class="link" href="#_팀_전체_조회_검색">팀 전체 조회 + 검색</a></h3>
 <div class="sect3">
 <h4 id="search-team-list"><a class="link" href="#search-team-list">HTTP Request</a></h4>
 <div class="listingblock">
@@ -2583,8 +2595,8 @@ Content-Length: 1478
       "paged" : true
     },
     "last" : true,
-    "totalElements" : 4,
     "totalPages" : 1,
+    "totalElements" : 4,
     "size" : 4,
     "number" : 0,
     "sort" : {
@@ -2821,7 +2833,7 @@ Content-Length: 1478
 </div>
 </div>
 <div class="sect2">
-<h3 id="_2_4_팀_상세_조회"><a class="link" href="#_2_4_팀_상세_조회">2.4 팀 상세 조회</a></h3>
+<h3 id="_팀_상세_조회"><a class="link" href="#_팀_상세_조회">팀 상세 조회</a></h3>
 <div class="sect3">
 <h4 id="detail-team"><a class="link" href="#detail-team">HTTP Request</a></h4>
 <div class="listingblock">
@@ -3292,7 +3304,7 @@ Host: localhost:8080
 </div>
 </div>
 <div class="sect2">
-<h3 id="_2_5_팀_정보_수정"><a class="link" href="#_2_5_팀_정보_수정">2.5 팀 정보 수정</a></h3>
+<h3 id="_팀_정보_수정"><a class="link" href="#_팀_정보_수정">팀 정보 수정</a></h3>
 <div class="sect3">
 <h4 id="modify-team"><a class="link" href="#modify-team">HTTP Request</a></h4>
 <div class="listingblock">
@@ -3456,7 +3468,7 @@ Content-Length: 232
 </div>
 </div>
 <div class="sect2">
-<h3 id="_2_5_1_팀원_추방"><a class="link" href="#_2_5_1_팀원_추방">2.5.1 팀원 추방</a></h3>
+<h3 id="_팀원_추방"><a class="link" href="#_팀원_추방">팀원 추방</a></h3>
 <div class="sect3">
 <h4 id="banish-member"><a class="link" href="#banish-member">HTTP Request</a></h4>
 <div class="listingblock">
@@ -3577,7 +3589,7 @@ Content-Length: 90
 </div>
 </div>
 <div class="sect2">
-<h3 id="_2_5_2_팀_가입"><a class="link" href="#_2_5_2_팀_가입">2.5.2 팀 가입</a></h3>
+<h3 id="_팀_가입"><a class="link" href="#_팀_가입">팀 가입</a></h3>
 <div class="sect3">
 <h4 id="join-team"><a class="link" href="#join-team">HTTP Request</a></h4>
 <div class="listingblock">
@@ -3948,7 +3960,7 @@ Content-Length: 97
 </div>
 </div>
 <div class="sect2">
-<h3 id="_2_5_3_팀_탈퇴"><a class="link" href="#_2_5_3_팀_탈퇴">2.5.3 팀 탈퇴</a></h3>
+<h3 id="_팀_탈퇴"><a class="link" href="#_팀_탈퇴">팀 탈퇴</a></h3>
 <div class="sect3">
 <h4 id="leave-team"><a class="link" href="#leave-team">HTTP Request</a></h4>
 <div class="listingblock">
@@ -4062,7 +4074,7 @@ Content-Length: 90
 </div>
 </div>
 <div class="sect2">
-<h3 id="_2_6_팀_삭제"><a class="link" href="#_2_6_팀_삭제">2.6 팀 삭제</a></h3>
+<h3 id="_팀_삭제"><a class="link" href="#_팀_삭제">팀 삭제</a></h3>
 <div class="sect3">
 <h4 id="delete-team"><a class="link" href="#delete-team">HTTP Request</a></h4>
 <div class="listingblock">
@@ -4181,7 +4193,7 @@ Content-Length: 90
 <h2 id="_chat_api"><a class="link" href="#_chat_api">Chat API</a></h2>
 <div class="sectionbody">
 <div class="sect2">
-<h3 id="Chat-API"><a class="link" href="#Chat-API">2.7.2 채팅방 상세 조회</a></h3>
+<h3 id="Chat-API"><a class="link" href="#Chat-API">채팅방 상세 조회</a></h3>
 <div class="sect3">
 <h4 id="enter-chat-room"><a class="link" href="#enter-chat-room">HTTP Request</a></h4>
 <div class="listingblock">
@@ -4220,7 +4232,7 @@ Host: localhost:8080</code></pre>
 <div class="content">
 <pre class="highlightjs highlight nowrap"><code class="language-http hljs" data-lang="http">HTTP/1.1 200 OK
 Content-Type: application/json
-Content-Length: 706
+Content-Length: 704
 
 {
   "code" : 200,
@@ -4239,12 +4251,12 @@ Content-Length: 706
       "chatMessageId" : 1,
       "memberNickname" : "메시지 보낸 유저 닉네임",
       "message" : "메시지 내용",
-      "createdAt" : [ 2024, 4, 2, 14, 48, 47, 483698600 ]
+      "createdAt" : [ 2024, 4, 5, 10, 8, 56, 904684700 ]
     }, {
       "chatMessageId" : 1,
       "memberNickname" : "메시지 보낸 유저 닉네임",
       "message" : "메시지 내용",
-      "createdAt" : [ 2024, 4, 2, 14, 48, 47, 483698600 ]
+      "createdAt" : [ 2024, 4, 5, 10, 8, 56, 904684700 ]
     } ]
   }
 }</code></pre>
@@ -4868,7 +4880,7 @@ Host: localhost:8080
 
 {
   "memberId" : 1,
-  "memberDate" : "2024-04-02"
+  "memberDate" : "2024-04-05"
 }</code></pre>
 </div>
 </div>
@@ -5157,8 +5169,8 @@ Content-Length: 1709
       "paged" : true
     },
     "last" : true,
-    "totalElements" : 5,
     "totalPages" : 1,
+    "totalElements" : 5,
     "size" : 5,
     "number" : 0,
     "sort" : {
@@ -5637,8 +5649,8 @@ Content-Length: 1794
       "paged" : true
     },
     "last" : true,
-    "totalElements" : 2,
     "totalPages" : 1,
+    "totalElements" : 2,
     "size" : 4,
     "number" : 0,
     "sort" : {
@@ -5910,7 +5922,7 @@ Content-Length: 1794
 <div id="footer">
 <div id="footer-text">
 Version 0.0.1-SNAPSHOT<br>
-Last updated 2024-04-02 11:11:43 +0900
+Last updated 2024-04-05 10:07:02 +0900
 </div>
 </div>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.18.3/highlight.min.js"></script>
